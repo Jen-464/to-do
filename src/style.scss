@@ -170,7 +170,12 @@ ul {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        // background-color: red;
     }
 
+}
+
+@media (min-width: 320px) {
+    html {
+        font-size: 24px;
+    }
 }

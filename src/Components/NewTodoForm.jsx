@@ -1,6 +1,7 @@
 import { useState } from "react"
 import PropTypes from 'prop-types';
 import CircleCheck from "./CircleCheck";
+import Sun from "./../../assets/icon-sun.svg";
 
 export default function NewTodoForm({ onSubmit, counter, setCounter }) {
   const [newItem, setNewItem] = useState("")
@@ -16,7 +17,7 @@ export default function NewTodoForm({ onSubmit, counter, setCounter }) {
     <form onSubmit={handleSubmit} className="new-item-form">
       <div className="title">
         <h1>TODO</h1>
-        <img className="modeSwitch" src="assets/icon-sun.svg" alt="icon of a sun" />
+        <img className="modeSwitch" src={Sun} alt="icon of a sun" />
       </div>
       <div className="form-row">
         <input value={newItem} onChange={e => setNewItem(e.target.value)} type="text" id="item" placeholder="Create a new todo..." />

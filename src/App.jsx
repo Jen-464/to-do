@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import NewTodoForm from "./NewTodoForm"
-import TodoList from "./TodoList"
+import NewTodoForm from "./Components/NewTodoForm"
+import TodoList from "./Components/TodoList"
 import "./style.scss"
 
 export default function App() {
@@ -44,7 +44,7 @@ export default function App() {
   return (
     <>
       <header></header>
-      <NewTodoForm onSubmit={addTodo} counter={counter} setCounter={setCounter}/>
+      <NewTodoForm onSubmit={addTodo} counter={counter} setCounter={setCounter} />
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </>
   );
