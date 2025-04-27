@@ -1,9 +1,10 @@
+import { useState, useEffect } from "react"
 import NewTodoForm from "./NewTodoForm"
 import TodoList from "./TodoList"
-import { useState, useEffect } from "react"
 import "./style.scss"
 
 export default function App() {
+  const [counter, setCounter] = useState(0);
   const [todos, setTodos] = useState(() => {
     const localValue = localStorage.getItem("ITEMS")
     if (localValue == null) return []
@@ -43,7 +44,7 @@ export default function App() {
   return (
     <>
       <header></header>
-      <NewTodoForm onSubmit={addTodo} />
+      <NewTodoForm onSubmit={addTodo} counter={counter} setCounter={setCounter}/>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </>
   );

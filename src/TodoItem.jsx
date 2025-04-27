@@ -16,7 +16,7 @@ export default function TodoItem({ id, title, completed, toggleTodo, deleteTodo 
             </label>
             {/* eslint-disable-next-line no-unused-vars */}
             <span onClick={e => deleteTodo(id)} onKeyDown={handleDeleteKeyDown} className="btn" tabIndex={0}> 
-            <img src="../assets/icon-cross.svg" alt="Cross Icon" className="cross"></img>
+            <img src="assets/icon-cross.svg" alt="Cross Icon" className="cross"></img>
             </span>
         </li>
     )
