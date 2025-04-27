@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Cross from "./../../assets/icon-cross.svg"
 
 export default function TodoItem({ id, title, completed, toggleTodo, deleteTodo }) {
     const handleDeleteKeyDown = (event) => {
@@ -17,16 +16,16 @@ export default function TodoItem({ id, title, completed, toggleTodo, deleteTodo 
             </label>
             {/* eslint-disable-next-line no-unused-vars */}
             <span onClick={e => deleteTodo(id)} onKeyDown={handleDeleteKeyDown} className="btn" tabIndex={0}> 
-            <img src={Cross} alt="Cross Icon" className="cross"></img>
+            <img src="/assets/icon-cross.svg" alt="Cross Icon" className="cross"></img>
             </span>
         </li>
     )
 }
 
 TodoItem.propTypes = {
-    id: PropTypes.func.isRequired,
-    title: PropTypes.func.isRequired,
-    completed: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
     toggleTodo: PropTypes.func.isRequired,
     deleteTodo: PropTypes.func.isRequired
 }
